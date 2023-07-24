@@ -43,17 +43,17 @@
  &caps_word    &kp SQT  &kp COMMA   &kp DOT      &kp P   &kp Y                 &kp INSERT                                                                &kp PRINTSCREEN   &kp F   &kp G     &kp C     &kp R     &kp L      &kp SLASH
     &kp TAB      &kp A      &kp O     &kp E      &kp U   &kp I            &kp PAUSE_BREAK  &kp LCTRL  &kp LALT                   &kp LGUI  &kp RCTRL  &kp K_CONTEXT_MENU   &kp D   &kp H     &kp T     &kp N     &kp S  &kp BACKSLASH
   &kp LSHFT   &kp SEMI      &kp Q     &kp J      &kp K   &kp X                                        &kp HOME                  &kp PG_UP                                  &kp B   &kp M     &kp W     &kp V     &kp Z      &kp RSHFT
-      &mo 2  &kp GRAVE   &kp CAPS  &kp LEFT  &kp RIGHT                           &kp BSPC    &kp DEL   &kp END                  &kp PG_DN  &kp ENTER           &kp SPACE          &kp UP  &kp DOWN  &kp LBKT  &kp RBKT          &mo 2
+      &mo 2  &kp GRAVE   &kp CAPS  &kp LEFT  &kp RIGHT                           &kp BSPC    &kp DEL   &kp END                    &kp ESC  &kp ENTER           &kp SPACE          &kp UP  &kp DOWN  &kp LBKT  &kp RBKT          &mo 2
             >;
         };
 
         layer_MacOS {
             bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                               &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                               &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans            &trans  &kp LGUI  &kp LALT                  &kp LCTRL   &kp RGUI     &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                &trans                  &kp PG_UP                        &trans  &trans  &trans  &trans  &trans  &trans
-  &mo 2  &trans  &trans  &trans  &trans                    &trans    &trans    &trans                  &kp PG_DN  &kp ENTER  &kp KP_N0          &trans  &trans  &trans  &trans   &mo 2
+ &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans            &trans  &kp LGUI  &kp LALT                  &kp LCTRL  &kp RGUI  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                                &trans                     &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+  &mo 2  &trans  &trans  &trans  &trans                    &trans    &trans    &trans                     &trans    &trans  &trans          &trans  &trans  &trans  &trans   &mo 2
             >;
         };
 

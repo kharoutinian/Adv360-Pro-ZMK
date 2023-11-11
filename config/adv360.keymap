@@ -26,9 +26,28 @@
             tapping-term-ms = <200>;
             quick_tap_ms = <175>;
             flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+    macros {
+        V3D: V3D {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(H) &kp E &kp L &kp L &kp O &kp COMMA &kp SPACE &kp LS(W) &kp O &kp R &kp L &kp D &kp EXCL>;
+            label = "V3D";
+        };
+        TVS: TVS {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(H) &kp E &kp L &kp L &kp O &kp SPACE &kp LS(W) &kp O &kp R &kp L &kp D>;
+            label = "TVS";
+        };
+        VLAB: VLAB {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(H) &kp E &kp L &kp L &kp O &kp SPACE &kp LS(W) &kp O &kp R &kp L &kp D &kp N2>;
+            label = "VLAB";
         };
     };
 
@@ -37,11 +56,11 @@
 
         default_layer {
             bindings = <
- &kp EQUAL     &kp N1     &kp N2    &kp N3     &kp N4  &kp N5           &tog 1                                                              &mo 3  &kp N6  &kp N7    &kp N8    &kp N9    &kp N0      &kp MINUS
-&caps_word    &kp SQT  &kp COMMA   &kp DOT      &kp P   &kp Y       &kp INSERT                                                    &kp PRINTSCREEN   &kp F   &kp G     &kp C     &kp R     &kp L      &kp SLASH
-   &kp TAB      &kp A      &kp O     &kp E      &kp U   &kp I  &kp PAUSE_BREAK  &kp LCTRL  &kp LALT       &kp LGUI  &kp RCTRL  &kp K_CONTEXT_MENU   &kp D   &kp H     &kp T     &kp N     &kp S  &kp BACKSLASH
- &kp LSHFT   &kp SEMI      &kp Q     &kp J      &kp K   &kp X                              &kp HOME      &kp PG_UP                                  &kp B   &kp M     &kp W     &kp V     &kp Z      &kp RSHFT
-     &mo 2  &kp GRAVE   &kp CAPS  &kp LEFT  &kp RIGHT                 &kp BSPC    &kp DEL   &kp END        &kp ESC  &kp ENTER           &kp SPACE          &kp UP  &kp DOWN  &kp LBKT  &kp RBKT          &mo 2
+&kp EQUAL   &kp N1     &kp N2     &kp N3    &kp N4     &kp N5  &tog 1                                                          &mo 3               &kp N6  &kp N7  &kp N8    &kp N9    &kp N0    &kp MINUS
+&caps_word  &kp SQT    &kp COMMA  &kp DOT   &kp P      &kp Y   &kp INSERT                                                      &kp PRINTSCREEN     &kp F   &kp G   &kp C     &kp R     &kp L     &kp SLASH
+&kp TAB     &kp A      &kp O      &kp E     &kp U      &kp I   &kp PAUSE_BREAK  &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &kp K_CONTEXT_MENU  &kp D   &kp H   &kp T     &kp N     &kp S     &kp BACKSLASH
+&kp LSHFT   &kp SEMI   &kp Q      &kp J     &kp K      &kp X                               &kp HOME      &kp PG_UP                                 &kp B   &kp M   &kp W     &kp V     &kp Z     &kp RSHFT
+&mo 2       &kp GRAVE  &kp CAPS   &kp LEFT  &kp RIGHT          &kp BSPC         &kp DEL    &kp END       &kp ESC    &kp ENTER  &kp SPACE                   &kp UP  &kp DOWN  &kp LBKT  &kp RBKT  &mo 2
             >;
         };
 
@@ -50,28 +69,28 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LGUI  &kp LALT      &kp LCTRL  &kp RGUI  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                      &trans         &trans                    &trans  &trans  &trans  &trans  &trans  &trans
- &mo 2  &trans  &trans  &trans  &trans          &trans    &trans    &trans         &trans    &trans  &trans          &trans  &trans  &trans  &trans   &mo 2
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans        &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&mo 2   &trans  &trans  &trans  &trans          &trans  &trans    &trans        &trans     &trans    &trans          &trans  &trans  &trans  &trans  &mo 2
             >;
         };
 
         layer_fn {
             bindings = <
-&kp F1          &kp F2   &kp F3   &kp F4   &kp F5  &kp F6  &tog 1                                          &mo 3  &kp F7   &kp F8   &kp F9  &kp F10  &kp F11  &kp F12
-&trans          &trans  &kp F10  &kp F11  &kp F12  &trans   &none                                          &none  &trans  &kp F10  &kp F11  &kp F12   &trans   &trans
-&trans          &trans   &kp F7   &kp F8   &kp F9  &trans   &none  &trans  &trans         &trans  &trans   &none  &trans   &kp F7   &kp F8   &kp F9   &trans   &trans
-&trans          &trans   &kp F4   &kp F5   &kp F6  &trans                  &trans         &trans                  &trans   &kp F4   &kp F5   &kp F6   &trans   &trans
- &mo 2  &macro_kinesis   &kp F1   &kp F2   &kp F3          &trans  &trans  &trans      &kp PG_DN  &trans  &trans           &kp F1   &kp F2   &kp F3   &trans    &mo 2
+&kp F1  &kp F2  &kp F3   &kp F4   &kp F5   &kp F6  &tog 1                                         &mo 3   &kp F7  &kp F8   &kp F9   &kp F10  &kp F11  &kp F12
+&trans  &trans  &kp F10  &kp F11  &kp F12  &trans  &none                                          &none   &trans  &kp F10  &kp F11  &kp F12  &trans   &trans
+&trans  &trans  &kp F7   &kp F8   &kp F9   &trans  &none   &trans  &trans      &trans     &trans  &none   &trans  &kp F7   &kp F8   &kp F9   &trans   &trans
+&trans  &trans  &kp F4   &kp F5   &kp F6   &trans                  &trans      &trans                     &trans  &kp F4   &kp F5   &kp F6   &trans   &trans
+&mo 2   &trans  &kp F1   &kp F2   &kp F3           &V3D    &VLAB   &TVS        &kp PG_DN  &trans  &trans          &kp F1   &kp F2   &kp F3   &trans   &mo 2
             >;
         };
 
         layer_mod {
             bindings = <
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &none                                                            &trans  &none       &none       &none  &none  &none  &none
-&none         &none         &none         &none         &none         &none  &bootloader                                                       &bootloader  &none       &none       &none  &none  &none  &none
-&none         &none         &none         &none         &none         &none        &none  &none  &none      &bt BT_CLR       &none  &rgb_ug RGB_MEFS_CMD 5  &none       &none       &none  &none  &none  &none
-&none         &none         &none         &none         &none         &none                      &none           &none                                      &none       &none       &none  &none  &none  &none
-&none         &none         &none         &none         &none                      &none  &none  &none           &none  &bl BL_TOG         &rgb_ug RGB_TOG         &bl BL_INC  &bl BL_DEC  &none  &none  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &none  &none       &none       &none  &none  &none
+&none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none  &none       &none       &none  &none  &none
+&none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
+&none  &none         &none         &none         &none         &none                             &none      &none                                           &none  &none       &none       &none  &none  &none
+&none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
             >;
         };
     };

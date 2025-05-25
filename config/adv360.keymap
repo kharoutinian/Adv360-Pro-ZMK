@@ -21,6 +21,36 @@
         };
     };
 
+    macros {
+        seasame: seasame {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(S) &kp E &kp A &kp S &kp A &kp M &kp E>;
+            label = "SEASAME";
+        };
+
+        email1: email1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp E &kp M &kp A &kp I &kp L &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "EMAIL1";
+        };
+
+        email2: email2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp E &kp M &kp A &kp I &kp L &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "EMAIL2";
+        };
+
+        username1: username1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp K &kp H &kp A &kp R &kp O &kp U &kp T &kp I &kp N &kp I &kp A &kp N>;
+            label = "USERNAME1";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -49,11 +79,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&kp F1  &kp F2  &kp F3   &kp F4   &kp F5   &kp F6  &tog 1                                         &mo 3   &kp F7  &kp F8   &kp F9   &kp F10  &kp F11  &kp F12
-&trans  &trans  &kp F10  &kp F11  &kp F12  &trans  &none                                          &none   &trans  &kp F10  &kp F11  &kp F12  &trans   &trans
-&trans  &trans  &kp F7   &kp F8   &kp F9   &trans  &none   &trans  &trans      &trans     &trans  &none   &trans  &kp F7   &kp F8   &kp F9   &trans   &trans
-&trans  &trans  &kp F4   &kp F5   &kp F6   &trans                  &trans      &trans                     &trans  &kp F4   &kp F5   &kp F6   &trans   &trans
-&mo 2   &trans  &kp F1   &kp F2   &kp F3           &V3D    &trans  &trans      &kp PG_DN  &trans  &trans          &kp F1   &kp F2   &kp F3   &trans   &mo 2
+&kp F1  &kp F2  &kp F3   &kp F4   &kp F5   &kp F6  &tog 1                                                &mo 3   &kp F7  &kp F8   &kp F9   &kp F10  &kp F11  &kp F12
+&trans  &trans  &kp F10  &kp F11  &kp F12  &trans  &none                                                 &none   &trans  &kp F10  &kp F11  &kp F12  &trans   &trans
+&trans  &trans  &kp F7   &kp F8   &kp F9   &trans  &none     &trans      &trans       &trans     &trans  &none   &trans  &kp F7   &kp F8   &kp F9   &trans   &trans
+&trans  &trans  &kp F4   &kp F5   &kp F6   &trans                        &email2      &trans                     &trans  &kp F4   &kp F5   &kp F6   &trans   &trans
+&mo 2   &trans  &kp F1   &kp F2   &kp F3           &seasame  &username1  &email1      &kp PG_DN  &trans  &trans          &kp F1   &kp F2   &kp F3   &trans   &mo 2
             >;
         };
 
